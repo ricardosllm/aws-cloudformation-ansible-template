@@ -1,4 +1,6 @@
-# Template to create or update cloudformation stacks with ansible
+[![Build Status](https://travis-ci.org/ricardosllm/aws-cloudformation-ansible-template.svg?branch=master)](https://travis-ci.org/ricardosllm/aws-cloudformation-ansible-template)
+
+#  AWS CloudFormation Ansible template
 
 This is intended as a starting repo for projects where you need to create AWS CloudFormation stacks
 
