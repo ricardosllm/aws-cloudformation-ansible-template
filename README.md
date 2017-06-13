@@ -11,3 +11,7 @@ Edit `Makefile` and add your AWS profile name
 # Create or Update stack
 
 `$ make stack`
+
+---
+
+"This project is licensed under the terms of the MIT license."
