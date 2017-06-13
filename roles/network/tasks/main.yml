@@ -1,0 +1,19 @@
+---
+- name: create or update stack resources
+  cloudformation:
+    stack_name: >
+      "{{ project_name | regex_replace('^[\_\s]$', '-') }}"
+      "-network-stack-{{ deployment_env }}"
+    state: "present"
+    region: "{{ aws.region }}"
+    disable_rollback: false
+    template: "files/stack_template.yaml"
+    tags:
+      Env: "{{ env }}"
+    stack_policy: "files/stack_policy.json"
+  register: "networkStack"
+
+- name: read stack output
+  set_fact:
+    monitoring_stack:
+      stack_output: "{{ networkStack.stack_outputs }}"
